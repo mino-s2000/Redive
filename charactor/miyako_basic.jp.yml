@@ -1,0 +1,73 @@
+information:
+  position: 前衛
+  attacking_category: 物理
+  role: タンク
+  default_rarity: 2
+  breed: 魔族
+  get_memory_piece: Pアリーナコイン
+maximum_status:
+  hp: 18668
+  strength:
+    offensive:
+      physical: 2584
+      magical: 20
+    defensive:
+      physical: 321
+      magical: 205
+skill:
+  union_burst:
+    description: 目の前の敵1体に物理ダメージを与え、自身のHPを回復する
+    effect:
+      - id: 1
+        type: 攻撃
+        point: 16097
+        target:
+          category: 敵
+          position: 目の前
+          count: 1
+      - id: 2
+        type: 回復
+        point: 4416
+        target:
+          category: 自身
+          position: 自身
+          count: 1
+  active_skill:
+    - id: 1
+      description: 【変身】幽霊に変身し、しばらくの間無敵状態になる
+      effect:
+        - id: 1
+          type: 変身
+          point: 0
+          target:
+            category: 自身
+            position: 自身
+            count: 1
+    - id: 2
+      description: 自身のHPを回復する
+      effect:
+        - id: 1
+          type: 回復
+          point: 3916
+          target:
+            category: 自身
+            position: 自身
+            count: 1
+  extra_skill:
+    description: バトル開始時に、自身の物理防御力を上げる
+    default_effect:
+      - id: 1
+        type: 防御バフ (物理)
+        point: 0
+        target:
+          category: 自身
+          position: 自身
+          count: 1
+    rarity_5_effect:
+      - id: 1
+        type: 防御バフ (物理)
+        point: 0
+        target:
+          category: 自身
+          position: 自身
+          count: 1

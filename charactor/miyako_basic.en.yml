@@ -1,0 +1,73 @@
+information:
+  position: Front
+  attacking_category: Physical
+  role: Tank
+  default_rarity: 2
+  breed: Daemon
+  get_memory_piece: P-Arena Coin
+maximum_status:
+  hp: 18668
+  strength:
+    offensive:
+      physical: 2584
+      magical: 20
+    defensive:
+      physical: 321
+      magical: 205
+skill:
+  union_burst:
+    description: It gives physical damage to 1 character of enemy in front of me and further recovers own HP.
+    effect:
+      - id: 1
+        type: Attack
+        point: 16097
+        target:
+          category: enemy
+          position: in front of me
+          count: 1
+      - id: 2
+        type: Recover
+        point: 4416
+        target:
+          category: own
+          position: own
+          count: 1
+  active_skill:
+    - id: 1
+      description: Transformation. It turns into a ghost and becomes invincible for a while.
+      effect:
+        - id: 1
+          type: Invincible
+          point: 0
+          target:
+            category: own
+            position: own
+            count: 1
+    - id: 2
+      description: Recover your own HP.
+      effect:
+        - id: 1
+          type: Recover
+          point: 3916
+          target:
+            category: own
+            position: own
+            count: 1
+  extra_skill:
+    description: Increase own physical defense capability at the beginning of the battle.
+    default_effect:
+      - id: 1
+        type: Defensive Buff (Physical)
+        point:
+        target:
+          category: own
+          position: own
+          count: 1
+    rarity_5_effect:
+      - id: 1
+        type: Defensive Buff (Physical)
+        point:
+        target:
+          category: own
+          position: own
+          count: 1
