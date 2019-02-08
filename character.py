@@ -11,10 +11,10 @@ def convert_chara_name_to_id(c_name):
 
 def get_chara_data(c_name):
     c_id = convert_chara_name_to_id(c_name)
-    with codecs.open(f'.\\charactor\\{c_id}.jp.yml', 'r', 'utf-8') as f:
+    with codecs.open(f'.\\character\\{c_id}.jp.yml', 'r', 'utf-8') as f:
         return yaml.load(f)
 
-def get_charactor(msg):
+def get_character(msg):
     c = get_chara_data(msg[3])
     reply = ''
     if msg[2] == 'information' or msg[2] == 'info':
